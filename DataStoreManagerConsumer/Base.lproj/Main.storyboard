@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DataStoreManagerConsumer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8vL-TV-fo1">
+                                <rect key="frame" x="-9" y="165" width="393" height="286"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="XCC-ZC-xSm">
+                                        <rect key="frame" x="20" y="20" width="353" height="246"/>
+                                        <subviews>
+                                            <pickerView contentMode="scaleToFill" verticalCompressionResistancePriority="751" translatesAutoresizingMaskIntoConstraints="NO" id="4nu-9E-9wg">
+                                                <rect key="frame" x="16.5" y="0.0" width="320" height="216"/>
+                                                <color key="backgroundColor" red="0.57342950275910309" green="0.81645394534102556" blue="0.9994240403175354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <connections>
+                                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="UXQ-T1-3P1"/>
+                                                    <outlet property="delegate" destination="BYZ-38-t0r" id="ml8-s1-vxs"/>
+                                                </connections>
+                                            </pickerView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sSw-yc-DB1">
+                                                <rect key="frame" x="89.5" y="241" width="174" height="5"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="28"/>
+                                                <state key="normal" title="Validate Store">
+                                                    <color key="titleColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="validateSelectedStore:" destination="BYZ-38-t0r" eventType="touchUpInside" id="krl-zb-ftq"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="XCC-ZC-xSm" firstAttribute="top" secondItem="8vL-TV-fo1" secondAttribute="top" constant="20" id="G0u-KP-12s"/>
+                                    <constraint firstItem="XCC-ZC-xSm" firstAttribute="leading" secondItem="8vL-TV-fo1" secondAttribute="leading" constant="20" id="PQL-IW-sdv"/>
+                                    <constraint firstAttribute="trailing" secondItem="XCC-ZC-xSm" secondAttribute="trailing" constant="20" id="kIV-53-qs0"/>
+                                    <constraint firstAttribute="bottom" secondItem="XCC-ZC-xSm" secondAttribute="bottom" constant="20" id="kez-qn-6Rw"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="leading" secondItem="8vL-TV-fo1" secondAttribute="leading" constant="9" id="8fW-Ly-AoS"/>
+                            <constraint firstItem="8vL-TV-fo1" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="CR6-1b-2aw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="8vL-TV-fo1" secondAttribute="bottom" constant="216" id="kgA-iU-EML"/>
+                            <constraint firstItem="8vL-TV-fo1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="145" id="sVU-eN-bJ6"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="datastoresPicker" destination="4nu-9E-9wg" id="AFv-Ar-FMA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+</document>

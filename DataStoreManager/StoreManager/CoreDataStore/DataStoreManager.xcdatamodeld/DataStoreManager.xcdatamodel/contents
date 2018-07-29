@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13772" systemVersion="16G1510" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="CoreDataItem" representedClassName="CoreDataItem" syncable="YES" codeGenerationType="class">
+        <attribute name="content" attributeType="Binary" syncable="YES"/>
+        <attribute name="isSessionScope" optional="YES" attributeType="Boolean" defaultValueString="YES" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="itemID" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="CoreDataItem" positionX="-63" positionY="-18" width="128" height="88"/>
+    </elements>
+</model>
